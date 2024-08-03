@@ -1,0 +1,26 @@
+.simply-countdown {
+  overflow: hidden;
+  display: flex;
+  font-family: "Arial", sans-serif;
+  justify-content: center;
+  gap: 10px
+}
+.simply-countdown > .simply-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 2.5em;
+}
+
+.simply-countdown > .simply-section .simply-word {
+  font-weight: 100;
+}
