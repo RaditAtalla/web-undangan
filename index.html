@@ -27,30 +27,48 @@
     <!-- Simply countdown -->
     <link rel="stylesheet" href="css/simplyCountdown.theme.default.css" />
     <script src="js/simplyCountdown.min.js"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <section class="hero">
+    <audio autoplay loop id="song">
+      <source src="assets/audio/song.mp3" type="audio/mp3" />
+    </audio>
+    <section class="hero" id="hero">
       <div class="title">
-        <p>Wedding of</p>
-        <h1>Fauzan & Titi</h1>
+        <p data-aos="fade-up" data-aos-duration="500">Wedding of</p>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Fauzan & Titi</h1>
       </div>
 
       <div class="date">
-        <p>Save the date</p>
-        <p>07 | 09 | 24</p>
+        <p data-aos="fade-up" data-aos-duration="1500">Save the date</p>
+        <p data-aos="fade-up" data-aos-duration="2000">07 | 09 | 24</p>
       </div>
 
-      <a href="" class="cta-button">Buka undangan</a>
+      <a
+        href="#invitation"
+        onclick="playSong()"
+        class="cta-button"
+        data-aos="fade-up"
+        data-aos-duration="2500"
+        >Buka undangan</a
+      >
     </section>
 
-    <main>
-      <section class="countdown-wrapper">
+    <main id="invitation">
+      <section
+        class="countdown-wrapper"
+        data-aos="flip-up"
+        data-aos-duration="1000"
+      >
         <h2>Countdown</h2>
         <div class="simply-countdown"></div>
       </section>
 
       <section class="bride-wrapper">
-        <div class="bride">
+        <div class="bride" data-aos="zoom-in" data-aos-duration="1000">
           <img src="https://picsum.photos/150" alt="foto" />
           <div class="bride-info">
             <h3>Ahmad Fauzan, ST.</h3>
@@ -61,7 +79,7 @@
           </div>
         </div>
 
-        <div class="bride">
+        <div class="bride" data-aos="zoom-in" data-aos-duration="1500">
           <div class="bride-info">
             <h3>Nurhayati Hazmar Ritonga, S.Pd</h3>
             <p>Putri dari Bapak Hamzah dan Ibu Maya Rusmiati, S.Pd.I</p>
@@ -72,18 +90,26 @@
 
       <section class="story">
         <div class="header">
-          <div class="line"></div>
-          <h2>Our Story</h2>
-          <div class="line"></div>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
+          <h2 data-aos="fade-up" data-aos-duration="1000">Our Story</h2>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
         </div>
 
         <div class="story-wrapper">
-          <div class="info-wrapper">
+          <div
+            class="info-wrapper"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <h3>Engagement</h3>
             <p>24 Februari 2024</p>
           </div>
           <img src="assets/img/timeline.png" />
-          <div class="info-wrapper">
+          <div
+            class="info-wrapper"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <h3>Marriage</h3>
             <p>7 September 2024</p>
           </div>
@@ -92,19 +118,19 @@
 
       <section class="event">
         <div class="header">
-          <div class="line"></div>
-          <h2>Tanggal Pesta</h2>
-          <div class="line"></div>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
+          <h2 data-aos="fade-up" data-aos-duration="1000">Tanggal Pesta</h2>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
         </div>
 
         <div class="event-wrapper">
-          <div class="event-info">
+          <div class="event-info" data-aos="zoom-in" data-aos-duration="1200">
             <h3>Akad</h3>
             <p>Sabtu, 07 September 2024</p>
             <p>Pukul 09:00 WIB</p>
           </div>
           <div class="v-line"></div>
-          <div class="event-info">
+          <div class="event-info" data-aos="zoom-in" data-aos-duration="1500">
             <h3>Resepsi</h3>
             <p>Sabtu, 07 September 2024</p>
             <p>Pukul 12:00 WIB</p>
@@ -114,77 +140,96 @@
 
       <section class="location">
         <div class="header">
-          <div class="line"></div>
-          <h2>Lokasi Pesta</h2>
-          <div class="line"></div>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
+          <h2 data-aos="fade-up" data-aos-duration="1200">Lokasi Pesta</h2>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
         </div>
 
         <div class="location-wrapper">
-          <div class="map">
+          <div class="map" data-aos="flip-up" data-aos-duration="1000">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1993819737363!2d98.67321707481102!3d3.5414199964328175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30313009ed9571fd%3A0x705ece49118d2489!2sUnit%20of%20Agricultural%20Mechanization!5e0!3m2!1sen!2sid!4v1722677411613!5m2!1sen!2sid"
-              width="100%"
-              height="144"
+              class="iframe"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div class="location-info">
+          <div
+            class="location-info"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <p>
               Jalan Jenderal Besar Dr. Abdul Haris Nasution No.7, Pangkalan
               Masyhur
             </p>
-            <a href="" class="button">Buka peta</a>
+            <a href="https://maps.app.goo.gl/znGWQnW54BVaN23b9" class="button"
+              >Buka peta</a
+            >
           </div>
         </div>
       </section>
 
       <section class="rsvp">
         <div class="header">
-          <div class="line"></div>
-          <h2>RSVP</h2>
-          <div class="line"></div>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
+          <h2 data-aos="fade-up" data-aos-duration="1000">RSVP</h2>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
         </div>
 
-        <form class="rsvp-wrapper">
+        <form
+          method="post"
+          action="https://script.google.com/macros/s/AKfycbx9kN0iKfHXIWu3rTDlLAqf_z0Uy-rs5FagvLv7Qruyzzf5LAKhwG85dWmQVkTpWGQ2/exec"
+          class="rsvp-wrapper"
+          id="my-form"
+        >
           <div class="rsvp-input">
-            <div>
+            <div data-aos="fade-down" data-aos-duration="1000">
               <label for="nama">Nama:</label>
               <input class="input" type="text" id="nama" name="nama" />
             </div>
-            <div>
-              <label for="jumlah">Jumlah:</label>
+            <div data-aos="fade-down" data-aos-duration="1000">
+              <label for="jumlah">Jumlah yang hadir:</label>
               <input class="input" type="number" id="jumlah" name="jumlah" />
             </div>
-            <div>
+            <div data-aos="fade-down" data-aos-duration="1000">
               <label for="konfirmasi">Konfirmasi:</label>
               <select class="input" name="konfirmasi" id="konfirmasi">
+                <option value="" disabled selected>==pilih==</option>
                 <option value="Hadir">Hadir</option>
                 <option value="Tidak hadir">Tidak hadir</option>
               </select>
             </div>
           </div>
 
-          <button type="submit" class="button">Kirim</button>
+          <button
+            type="submit"
+            class="button"
+            style="font-size: 1.25em"
+            data-aos="fade-down"
+            data-aos-duration="1200"
+          >
+            Kirim
+          </button>
         </form>
       </section>
 
       <section class="gift">
         <div class="header">
-          <div class="line"></div>
-          <h2>Kirim Kado</h2>
-          <div class="line"></div>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
+          <h2 data-aos="fade-up" data-aos-duration="1000">Kirim Kado</h2>
+          <div class="line" data-aos="zoom-in" data-aos-duration="1000"></div>
         </div>
 
         <div class="gift-wrapper">
-          <div class="bank">
+          <div class="bank" data-aos="zoom-in" data-aos-duration="1000">
             <img src="assets/img/bni.png" alt="logo bni" />
             <p>0357915127</p>
             <p>a.n. Ahmad Fauzan</p>
           </div>
-          <div class="bank">
+          <div class="bank" data-aos="zoom-in" data-aos-duration="1000">
             <img src="assets/img/mandiri.png" alt="logo mandiri" />
             <p>1050017974902</p>
             <p>a.n. Nurhayati Hazmar Ritonga</p>
@@ -200,10 +245,17 @@
     </main>
 
     <footer>
-      <p>© 2024. Website made by <a href="https://instagram.com/radit.rchmd" target="_blank">@radit.rchmd</a></p>
+      <p>
+        © 2024. Website made by
+        <a href="https://instagram.com/radit.rchmd" target="_blank"
+          >@radit.rchmd</a
+        >
+      </p>
     </footer>
 
     <script>
+      AOS.init();
+
       simplyCountdown(".simply-countdown", {
         year: 2024, // required
         month: 9, // required
@@ -218,6 +270,27 @@
           minutes: { singular: "Menit", plural: "Menit" },
           seconds: { singular: "Detik", plural: "Detik" },
         },
+      });
+
+      function playSong() {
+        let song = document.getElementById("song");
+        song.volume = 0.25;
+        song.play();
+      }
+
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("RSVP sudah dikirim");
+          });
+        });
       });
     </script>
   </body>

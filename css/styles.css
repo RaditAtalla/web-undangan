@@ -6,28 +6,33 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Merriweather", serif;
+  overflow-x: hidden;
+  background-image: url('../assets/img/background.png');
+
 }
 
 .hero {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  padding-top: 3em;
+  padding-top: 5em;
   background-image: url('../assets/img/prewed.png');
   background-size: cover;
   background-position: left;
   color: white;
-  margin-bottom: 9em;
+  margin-bottom: 3em;
 }
 
 .hero .title {
   text-align: center;
+  margin-bottom: 5em;
 }
 
 .hero .title p {
@@ -36,11 +41,12 @@ body {
 
 .hero .title h1 {
   font-family: 'Sacramento', serif;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .hero .date {
   text-align: center;
+  margin-bottom: 10em;
 }
 
 .hero .date p:last-of-type {
@@ -53,6 +59,7 @@ body {
   padding: 0.5em 2em;
   border-radius: 5px;
   text-decoration: none;
+  text-align: center;
 }
 
 main {
@@ -74,6 +81,7 @@ main {
 .bride-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1em;
   margin-bottom: 9em;
 }
@@ -107,7 +115,7 @@ main {
   display: flex;
   align-items: center;
   gap: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .header h2 {
@@ -129,6 +137,10 @@ main {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.story-wrapper img {
+  height: 300px;
 }
 
 .story-wrapper .info-wrapper:last-of-type {
@@ -197,6 +209,11 @@ main {
   margin-bottom: 1em;
 }
 
+.location-wrapper .map .iframe {
+  width: 100%;
+  height: 144px;
+}
+
 .location-wrapper .location-info {
   display: flex;
   flex-direction: column;
@@ -214,7 +231,8 @@ main {
   background: var(--green);
   border-radius: 5px;
   padding: 0.25em 2em;
-  border: none
+  border: none;
+  text-decoration: none;
 }
 
 .rsvp {
@@ -232,7 +250,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .rsvp-input div {
@@ -245,7 +263,8 @@ main {
   border-radius: 5px;
   font-size: 1.25em;
   padding: 0.25em;
-  min-width: 300px
+  min-width: 100%;
+  background: white;
 }
 
 .gift {
@@ -265,7 +284,11 @@ main {
 }
 
 .gift-wrapper .bank img {
-  width: 90%;
+  width: 50%;
+}
+
+.gift-wrapper .bank p {
+  text-align: center;
 }
 
 .wish {
@@ -280,4 +303,58 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 150%;
+  }
+
+  .hero {
+    justify-content: space-around;
+    padding: 0;
+    background-position: center;
+  }
+
+  .hero .title {
+    margin: 0;
+  }
+
+  .hero .date {
+    margin: 0;
+  }
+
+  .bride {
+    gap: 1em
+  }
+
+  .bride-info {
+    max-width: 400px;
+  }
+
+  .bride-wrapper {
+    gap: 3em
+  }
+
+  .location-wrapper .map .iframe {
+    height: 400px;
+  }
+
+  .gift-wrapper .bank img {
+    width: 30%;
+  }
+
+  main {
+    width: 60%;
+    margin: 0 auto
+  }
+
+  .input {
+    width: 150px
+  }
+
+  .event-wrapper .event-info p {
+    font-size: 1rem;
+  }
+
 }

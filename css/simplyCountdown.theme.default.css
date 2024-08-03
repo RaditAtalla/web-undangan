@@ -3,7 +3,7 @@
   display: flex;
   font-family: "Arial", sans-serif;
   justify-content: center;
-  gap: 10px
+  gap: 20px
 }
 .simply-countdown > .simply-section {
   display: flex;
