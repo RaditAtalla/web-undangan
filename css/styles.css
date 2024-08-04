@@ -321,6 +321,11 @@ main {
   margin-bottom: 9em;
 }
 
+.wish span {
+  font-family: 'sacramento', serif;
+  font-size: 2rem;
+}
+
 footer {
   background: var(--green);
   padding: 2em;
