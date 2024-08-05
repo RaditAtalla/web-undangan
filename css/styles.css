@@ -279,6 +279,11 @@ main {
   background: white;
 }
 
+.comment {
+  margin-bottom: 9em;
+
+}
+
 .gallery {
   margin-bottom: 9em;
   display: flex;
@@ -290,6 +295,40 @@ main {
 .gallery img {
   width: 100px;
   border-radius: 5px;
+}
+
+.comment form {
+  margin-bottom: 3em;
+}
+
+.comment-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.comment-box h3 {
+  font-family: 'sacramento', serif;
+  padding: 0.25em 1em 0 1em;
+  background: var(--green);
+  border-radius: 5px 5px 0 0;
+  background-image: url('../assets/img/background.png');
+}
+
+.comment-box p {
+  font-weight: 100;
+  padding: 1em 1em;
+  background: white;
+  border: 1px solid var(--green);
+  border-radius: 0 0 5px 5px;
+  font-size: 0.7em;
 }
 
 .gift {
