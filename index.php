@@ -207,10 +207,6 @@ if (isset($_POST['submit'])) {
       </div>
     </section>
 
-    <p class="wish">
-      Atas kehadirannya kami ucapkan, <br><span>Terimakasih</span>
-    </p>
-
     <section class="gallery">
       <img src="assets/img/prewed1.jpg" loading="lazy" data-aos="fade-up" data-aos-duration="1000" alt="Foto prewed">
       <img src="assets/img/prewed2.jpg" loading="lazy" data-aos="fade-up" data-aos-duration="1500" alt="Foto prewed">
@@ -252,6 +248,11 @@ if (isset($_POST['submit'])) {
         <?php endforeach; ?>
       </div>
     </section>
+
+    
+    <p class="wish">
+      Atas kehadirannya kami ucapkan, <br><span>Terimakasih</span>
+    </p>
 
   </main>
 
