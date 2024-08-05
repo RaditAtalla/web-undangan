@@ -4,8 +4,8 @@ require 'php/config.php';
 $comments = read("SELECT * FROM comments");
 
 if (isset($_POST['submit'])) {
-  $name = $_POST['name'];
-  $comment = $_POST['comment'];
+  $name = htmlspecialchars($_POST['name']);
+  $comment = htmlspecialchars($_POST['comment']);
 
   create("INSERT INTO comments(name, comment) VALUES ('$name', '$comment')");
   echo "<script>alert('Komentar berhasil ditambah!'); window.location.href = './';</script>";
