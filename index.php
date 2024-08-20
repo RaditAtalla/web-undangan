@@ -51,6 +51,7 @@ if (isset($_POST['submit'])) {
   </audio>
   <section class="hero" id="hero">
     <div class="title">
+      <p data-aos="fade-up" data-aos-duration="250" class="invited-name">Kepada Bapak/Ibu/Saudara/I, <span></span></p>
       <p data-aos="fade-up" data-aos-duration="500">Wedding of</p>
       <h1 data-aos="fade-up" data-aos-duration="1000">Fauzan & Titi</h1>
     </div>
@@ -180,7 +181,7 @@ if (isset($_POST['submit'])) {
           </div>
         </div>
 
-        <button type="submit" class="button" style="font-size: 1.25em" data-aos="fade-down" data-aos-duration="1200">
+        <button type="submit" class="button" style="font-size: 1.25em; cursor: pointer;" data-aos="fade-down" data-aos-duration="1200">
           Kirim
         </button>
       </form>
@@ -240,7 +241,7 @@ if (isset($_POST['submit'])) {
       </form>
 
       <div class="comment-wrapper">
-        <?php foreach($comments as $comment) : ?>
+        <?php foreach ($comments as $comment) : ?>
           <div class="comment-box">
             <h3><?= $comment["name"]; ?></h3>
             <p><?= $comment["comment"]; ?></p>
@@ -249,7 +250,7 @@ if (isset($_POST['submit'])) {
       </div>
     </section>
 
-    
+
     <p class="wish">
       Atas kehadirannya kami ucapkan, <br><span>Terimakasih</span>
     </p>
@@ -314,6 +315,12 @@ if (isset($_POST['submit'])) {
         });
       });
     });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const invName = urlParams.get('nama');
+
+    const nameContainer = document.querySelector(".hero p span")
+    nameContainer.innerText = invName
   </script>
 </body>
 
