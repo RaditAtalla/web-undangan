@@ -51,8 +51,9 @@ body {
 }
 
 .hero .date .invited-name {
-  font-size: 0.7em;
+  font-size: 1em;
   margin-top: 1em;
+  text-align: center
 }
 
 .hero .title h1 {
