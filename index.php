@@ -51,17 +51,17 @@ if (isset($_POST['submit'])) {
   </audio>
   <section class="hero" id="hero">
     <div class="title">
-      <p data-aos="fade-up" data-aos-duration="250" class="invited-name">Kepada Bapak/Ibu/Saudara/I, <span></span></p>
       <p data-aos="fade-up" data-aos-duration="500">Wedding of</p>
       <h1 data-aos="fade-up" data-aos-duration="1000">Fauzan & Titi</h1>
     </div>
 
     <div class="date">
       <p data-aos="fade-up" data-aos-duration="1500">Save the date</p>
-      <p data-aos="fade-up" data-aos-duration="2000">07 | 09 | 24</p>
+      <p data-aos="fade-up" data-aos-duration="2000" class="date-num">07 | 09 | 24</p>
+      <p data-aos="fade-up" data-aos-duration="2500" class="invited-name">Kepada Bapak/Ibu/Saudara/I, <span></span></p>
     </div>
 
-    <a href="#invitation" onclick="playSong()" class="cta-button" data-aos="fade-up" data-aos-duration="2500">Buka undangan</a>
+    <a href="#invitation" onclick="playSong()" class="cta-button" data-aos="fade-up" data-aos-duration="2700">Buka undangan</a>
   </section>
 
   <main id="invitation">

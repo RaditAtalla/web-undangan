@@ -18,7 +18,10 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.25);
@@ -47,10 +50,9 @@ body {
   font-size: 1.5em;
 }
 
-.hero .title .invited-name {
+.hero .date .invited-name {
   font-size: 0.7em;
-  margin-bottom: 1em;
-  z-index: inherit;
+  margin-top: 1em;
 }
 
 .hero .title h1 {
@@ -63,7 +65,7 @@ body {
   margin-bottom: 10em;
 }
 
-.hero .date p:last-of-type {
+.hero .date .date-num {
   font-size: 2.5em;
 }
 
@@ -395,10 +397,9 @@ footer p {
     margin: 0;
   }
 
-  .hero .title .invited-name {
+  /* .hero .date .invited-name {
     font-size: 1em;
-    
-  }
+  } */
 
   .hero .date {
     margin: 0;
